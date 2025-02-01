@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eco-fashion-store/static/css/main.9ff08645.css",
+    "main.js": "/eco-fashion-store/static/js/main.7184ebb5.js",
+    "index.html": "/eco-fashion-store/index.html",
+    "main.9ff08645.css.map": "/eco-fashion-store/static/css/main.9ff08645.css.map",
+    "main.7184ebb5.js.map": "/eco-fashion-store/static/js/main.7184ebb5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ff08645.css",
+    "static/js/main.7184ebb5.js"
+  ]
+}
