@@ -73,7 +73,7 @@ Les contributions sont les bienvenues ! Veuillez suivre ces étapes :
 Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
 ## 📞 Contact
-Bilal - [Votre Email ou Profil LinkedIn]
+Bilal - bstitou281@gmail.com
 
 Lien du Projet: [https://github.com/BILAL010290/eco-fashion-store](https://github.com/BILAL010290/eco-fashion-store)
 
