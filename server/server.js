@@ -6,7 +6,14 @@ const app = express();
 
 // Configuration CORS pour autoriser les requêtes du frontend
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
+  origin: [
+    'http://localhost:3000', 
+    'http://127.0.0.1:3000', 
+    'https://eco-fashion-store.netlify.app', 
+    'https://click-and-buy.netlify.app',
+    /^https:\/\/.*-eco-fashion-store\.netlify\.app$/,
+    /^https:\/\/click-and-buy-.*\.netlify\.app$/
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
@@ -23,11 +30,11 @@ app.use((req, res, next) => {
 });
 
 // Servir les fichiers statiques du client
-const clientPath = path.join(__dirname, '../client/public');
+const clientPath = path.join(__dirname, '../client/build');
 app.use(express.static(clientPath));
 
 // Route de base
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(clientPath, 'index.html'));
 });
 
@@ -45,7 +52,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = 3000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Serveur démarré sur le port ${PORT}`);
 });

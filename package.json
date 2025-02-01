@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
+    "start:render": "render.com",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run start\" \"npm run client\"",
     "install-client": "cd client && npm install",
